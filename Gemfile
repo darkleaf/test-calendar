@@ -22,6 +22,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'validates'
 gem 'pundit'
 gem 'simple_form'
+gem 'enumerize'
 
 group :development, :test do
   gem 'byebug'
