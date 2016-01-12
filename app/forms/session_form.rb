@@ -1,7 +1,7 @@
 class SessionForm < BaseForm
   attr_accessor :email, :password
 
-  validates :email, email: true
+  validates :email, presence: true, email: true
   validates :password, presence: true
 
   validate do
