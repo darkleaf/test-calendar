@@ -6,4 +6,8 @@ Rails.application.routes.draw do
     resources :events
     resource :calendar
   end
+
+  namespace :web_api, defaults: {format: :json} do
+    resources :event_objects
+  end
 end

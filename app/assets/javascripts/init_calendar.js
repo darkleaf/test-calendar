@@ -1,5 +1,5 @@
 $(function(){
     $('#calendar').fullCalendar({
-        //events: '/myfeed.php'
+        events: '/web_api/event_objects'
     });
 });

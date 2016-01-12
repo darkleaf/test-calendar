@@ -8,6 +8,11 @@
         %span.icon-bar
       = link_to 'Calendar', root_path, class: 'navbar-brand'
     .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        - if policy(:calendar).show?
+          %li= link_to t('.calendar'), calendar_path
+        - if policy(:event).new?
+          %li= link_to t('.new_event'), new_event_path
       %ul.nav.navbar-nav.navbar-right
         %li.navbar-text= current_user
         - if policy(:session).new?
