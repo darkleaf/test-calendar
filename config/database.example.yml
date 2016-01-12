@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: postgres
+
+development:
+   <<: *default
+   database: calendar_development
+
+test:
+  <<: *default
+  database: calendar_test

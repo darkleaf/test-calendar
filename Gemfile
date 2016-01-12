@@ -3,7 +3,7 @@ ruby '2.2.3'
 
 gem 'rails', '4.2.5'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'unicorn'
 
 gem 'haml'
