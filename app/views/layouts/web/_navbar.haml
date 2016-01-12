@@ -1,0 +1,13 @@
+.navbar.navbar-default.navbar-static-top{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{data: {target: ".navbar-collapse", toggle: "collapse"}, type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Calendar', root_path, class: 'navbar-brand'
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.navbar-text= current_user
+        %li= link_to t(:sign_out), session_path, method: :delete
