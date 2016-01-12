@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'registration', type: :request do
   context 'new' do
     it 'render with 200 status' do
