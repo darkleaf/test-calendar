@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery'
   gem 'rails-assets-jquery-ujs'
+  gem 'rails-assets-fullcalendar'
 end
 
 gem 'bootstrap-sass'
