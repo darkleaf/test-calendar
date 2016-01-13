@@ -7,7 +7,8 @@ module EventObjectsFilterQuery
     sql = ActiveRecord::Base.send(:sanitize_sql_array, [<<-SQL, start_date, end_date])
       SELECT days.day,
              events.id,
-             events.name
+             events.name,
+             events.user_id
       FROM (
         SELECT seria AS day
         FROM generate_series(?::timestamp, ?::timestamp, '1 day') AS seria
@@ -30,6 +31,7 @@ module EventObjectsFilterQuery
         id: row['id'],
         title: row['name'],
         start: row['day'].to_date,
+        user_id: row['user_id'],
         url: Rails.application.routes.url_helpers.edit_event_path(row['id'])
     }
   end

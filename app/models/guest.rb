@@ -1,4 +1,8 @@
 class Guest
+  def id
+    'guest'
+  end
+
   def guest?
     true
   end
