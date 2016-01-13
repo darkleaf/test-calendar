@@ -4,6 +4,7 @@ ru:
   sign_out: Выйти
   are_your_sure?: Вы уверены?
   delete: Удалить
+  not_authorized: У вас нет прав для выполнения этого действия
 
   layouts:
     web:
