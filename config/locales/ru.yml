@@ -1,0 +1,48 @@
+ru:
+  register: Зарегистрироваться
+  sign_in: Войти
+  sign_out: Выйти
+  are_your_sure?: Вы уверены?
+  delete: Удалить
+
+  layouts:
+    web:
+      navbar:
+        calendar: Календарь
+        new_event: Добавить событие
+
+  activerecord:
+    attributes:
+      user:
+        full_name: ФИО
+        emil: E-mail
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+      event:
+        date: Дата
+        name: Название
+        repeat_period: Период повторения
+  activemodel:
+    attributes:
+      session_form:
+        email: E-mail
+        password: Пароль
+    errors:
+      messages:
+        email: имеет неправильный формат
+      models:
+        session_form:
+          attributes:
+            base:
+              wrong_email_or_password: неправильный email или пароль
+  enumerize:
+    event:
+      repeat_period:
+        day: День
+        week: Неделя
+        month: Месяц (30 дней)
+        year: Год
+  helpers:
+    submit:
+      create: Сохранить
+      update: Сохранить

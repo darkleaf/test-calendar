@@ -23,6 +23,7 @@ gem 'validates'
 gem 'pundit'
 gem 'simple_form'
 gem 'enumerize'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'byebug'
