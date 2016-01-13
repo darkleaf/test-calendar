@@ -4,3 +4,6 @@
   = f.input :repeat_period
 
   = f.button :submit
+
+  - if event.persisted?
+    = link_to t(:delete), @event, method: :delete, data: {confirm: t(:are_your_sure?)}, class: 'btn btn-danger pull-right'
