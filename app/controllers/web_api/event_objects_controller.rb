@@ -3,6 +3,8 @@ class WebApi::EventObjectsController < WebApi::ApplicationController
     skip_policy_scope
     authorize :event_object
 
-    render json: EventObjectsFilterQuery.perform(params[:start], params[:end])
+    event_objects = EventObjectsFilterQuery.perform(params[:start], params[:end])
+
+    render json: event_objects
   end
 end
