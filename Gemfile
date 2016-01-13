@@ -25,6 +25,10 @@ gem 'simple_form'
 gem 'enumerize'
 gem 'rails-i18n'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
