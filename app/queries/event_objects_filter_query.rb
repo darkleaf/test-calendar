@@ -17,7 +17,7 @@ module EventObjectsFilterQuery
         SELECT *
         FROM events
         WHERE (events.repeat_period IS NULL AND days.day = events.date)
-           OR (EXTRACT(epoch FROM days.day - events.date)::int % events.repeat_period = 0)
+           OR (events.date <= days.day AND EXTRACT(epoch FROM days.day - events.date)::int % events.repeat_period = 0)
       ) as events ON true
     SQL
 
